@@ -22,6 +22,11 @@ jobs:
         run: |
           go mod download
           
+      - name: Install missing dependencies
+        run: |
+          go get -v ./...
+
+          
       - name: Build and Release
         run: |
           
