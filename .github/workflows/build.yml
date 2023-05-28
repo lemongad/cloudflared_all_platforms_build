@@ -25,6 +25,10 @@ jobs:
       - name: Install missing dependencies
         run: |
           go get -v ./...
+          go get github.com/cloudflare/cloudflared/cmd/cloudflared/tunnel
+          go get github.com/cloudflare/cloudflared/cmd/cloudflared/access
+          go get github.com/cloudflare/cloudflared/cmd/cloudflared/...
+
 
           
       - name: Build and Release
