@@ -76,11 +76,9 @@ func main() {
 		time.Now().Year(),
 	)
 	app.Version = fmt.Sprintf("%s (built %s%s)", Version, BuildTime, bInfo.GetBuildTypeMsg())
-	app.Description = `cloudflared connects your machine or user identity to Cloudflare's global network.
-	You can use it to authenticate a session to reach an API behind Access, route web traffic to this machine,
-	and configure access control.
+	app.Description = `In me the tiger sniffs the rose.
 
-	See https://developers.cloudflare.com/cloudflare-one/connections/connect-apps for more in-depth documentation.`
+        See https://developers.cloudflare.com/cloudflare-one/connections/connect-apps for more in-depth documentation.`
 	app.Flags = flags()
 	app.Action = action(graceShutdownC)
 	app.Commands = commands(cli.ShowVersion)
